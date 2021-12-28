@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EGI Students Portal</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  {% load static %}
+  <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png'%}" rel="icon">
+  <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png'%}" rel="EGI">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  {% load static %}
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css" rel="stylesheet' %}">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  {% load static %}
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="" class="logo mr-auto"><img src="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" alt="" class="img-fluid"></a>
+      <h1 class="logo mr-auto"><a href="{% url 'main' %}"><span>EGI Students</span> Portal</a></h1>
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{% url 'main' %}">Home</a></li>
+
+
+          
+          
+          <li class="drop-down" ><a href="#">More</a>
+              <ul>
+                {% comment %} <li ><a href="whatsapp.html">WhatsApp Groups Of Your Batch</a> {% endcomment %}
+                 <li><a href="frequently"> Frequently asked Questions </a></li>
+                  <li ><a href="{% url 'HOD' %}">Contact Your H.O.D.</a></li>
+                  <li ><a href="https://docs.google.com/forms/d/e/1FAIpQLScAbHqVyjMI3R8f_nOkP1_fEOWH2OfecL5YCeGYvLcyucbEFA/viewform?usp=sf_link">Share Your Notes</a></li>
+                  <li ><a href="">Give Your Feedback</a></li>
+                  <li ><a href="{% url 'signout' %}">LogOut</a></li>
+                  <li><a href="{% url 'team' %}">About Us</a></li>
+              </ul>
+            </li>
+            <li><a href="https://admission.eshancollege.com/">Official Website</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Team</h2>
+          <ol>
+            <li><a href="{% url 'main' %}">Home</a></li>
+            <li>Team</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Our Team</h2>
+          <p>Hello folks we, cnovas developed this college website as a project but this project will help us a lot, in this website we compiled the solution of that every little-little problems we faced in out previous semsters., hope you guys will like this, Don't forget to give us your Feedback to improve our website.  Thank you</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-github"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                  <a href=""><i class="icofont-whatsapp"></i></a>
+
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Anshul Kumar</h4>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                  <a href=""><i class="icofont-youtube"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Aman Kaim</h4>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-github"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Fiza Khan</h4>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-github"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Zikra Khan </h4>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>EGI Students Portal</h3>
+          <p>
+            28km mile stone, Agra-Delhi Highway, NH-2, Farah, Mathura -281122 <br><br>
+            <strong>Phone:</strong>+91 96392 34234<br>
+            <strong>Email:</strong> egistudentPortal@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+         <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'main' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'team' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'sources' %}">Sources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+        </div>
+
+  
+
+  <div class="container d-md-flex py-4">
+
+    <div class="mr-md-auto text-center text-md-left">
+      <div class="copyright">
+        &copy; Copyright <strong><span>EGI Students Portal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://www.instagram.com/codingnova/">Coding Novas</a>
+      </div>
+    </div>
+    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <a href="https://twitter.com/codingnova" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="https://www.facebook.com/codingnova" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="https://www.instagram.com/codingnova/" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.github.com/codingnova/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

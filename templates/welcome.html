@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% csrf_token %}
+{% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="{% static 'assets_welcome/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_welcome/css/Background-motion1-1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_welcome/css/Background-motion1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_welcome/css/Bootstrap-4---Full-Video-Background-v2.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_welcome/css/styles.css' %}">
+<!-- Favicons -->
+{% load static %}
+<link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" rel="icon">
+<link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" rel="EGI">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.cs' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+  <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/Forum---Thread-listing-1.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/Forum---Thread-listing.css' %}">
+
+   <!-- Vendor CSS Files -->
+  {% load static %}
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css" rel="stylesheet' %}">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  {% load static %}
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body><div class="video-background-holder" style="background:darkslategrey;">
+  <div class="video-background-overlay"></div>
+  
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <source src="{% static 'assets_welcome/Study Effectively With us.mp4' %}" type="video/mp4">
+    </video>
+  <div class="video-background-content container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+      {% csrf_token %}
+        <h1 class="display-4"> Hello! {% for fname in fname %} {{fname}}
+                {% endfor %}</h1>
+        <p class="lead mb-0">Hope everything is going great</p>
+        <p></p>
+        
+        
+
+        
+        <div>       <label for="checkbox ">I've read <a href="https://www.w3schools.com/tags/att_input_placeholder.asp">privacy policy</a></label>
+          <input type="checkbox" id="privacy" name="privacy" value="privacy" style="top: 100px;"></div>
+        
+          <button type="button" class="btn btn-outline-dark" style="margin-top: 240px;"><a  href="{% url 'main' %}"> click to Enter </a></button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+</div>
+<footer id="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>EGI Student Portal</h3>
+          <p>
+            28km mile stone, Agra-Delhi Highway, NH-2, Farah, Mathura -281122 <br><br>
+            <strong>Phone:</strong>+91 96392 34234<br>
+            <strong>Email:</strong> egistudentportal@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'team' %}">About us</a></li>
+            
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+  
+
+  <div class="container d-md-flex py-4">
+
+    <div class="mr-md-auto text-center text-md-left">
+      <div class="copyright">
+        &copy; Copyright <strong><span>EGI student Portal</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://www.instagram.com/codingnova/">Coding Novas</a>
+      </div>
+    {% comment %} </div>
+    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <a href="https://twitter.com/codingnova" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="https://www.facebook.com/codingnova" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="https://www.instagram.com/codingnova/" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="linkedin.com/codingnova" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+  </div> {% endcomment %}
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+</html>
+
+    <script src="{% static 'assets_welcome/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

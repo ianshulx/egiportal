@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Events List </title>
+
+     <!-- Favicons -->
+     {% load static %}
+  <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" rel="icon">
+  <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" rel="EGI">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+     <!-- Vendor CSS Files -->
+    {% load static %}
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css" rel="stylesheet' %}">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets_event/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_event/fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_event/css/Bold-BS4-Cards-with-Hover-Effect-74-1.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_event/css/Bold-BS4-Cards-with-Hover-Effect-74.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_event/css/styles.css' %}">
+  
+    <!-- Template Main CSS File -->
+    {% load static %}
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="{% url 'main' %}" class="logo mr-auto"><img src="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" alt="" class="img-fluid"></a>
+      <h1 class="logo mr-auto"><a href="{% url 'main' %}"><span>EGI Students </span>Portal</a></h1>
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="{% url 'main' %}">Home</a></li>
+
+            </ul>
+      </nav><!-- .nav-menu -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+</head>
+
+<body>
+    <!-- ======= Breadcrumbs ======= -->
+
+<section>
+<p></p>
+    <nav class="navbar navbar-light navbar-expand bg-light navigation-clean">
+        <div class="container"><button class="navbar-toggler" data-bs-toggle="collapse"></button></div>
+    </nav>
+    <header class="text-center text-white masthead" style="background:url('{% static 'assets/img/backg.jpg' %}')no-repeat center center;background-size:cover;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto position-relative">
+                    <h1 class="mb-5" style="color: #d4af37;background: #000080; text-align: center;">Student Events And Hackathons</h1>
+                </div>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navcol-1"></div>
+    </header>
+  </section>
+    <section class="showcase"></section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group mb-3">
+                        <!-- <div class="input-group"><span class="input-group-addon"> <i class="fa fa-search"></i></span><input class="form-control" type="search" name="search"></div> -->
+                        <h1><a>Events List</a></h1>
+                    </div>
+                </form>
+<div class="container">
+  <div class="row">
+    {% for event1 in events %}
+    <div class="col-sm-6 col-md-4">
+      <div class="box"><img src="{{event1.poster.url}}" alt="Desmond">
+          <div class="box-heading">
+              <h4 class="title" style="color:#333333;"> {{event1.event_name}} </h4><span class="post" style="color:#333333;"><b class="date">{{event1.event_date}}</b></span>
+          </div>
+          <div class="boxContent">
+              <b class="date">{{event1.event_date}}</b>
+              <p class="description" style="color:#333333;">{{event1.details}}</p><a class="read" href="{{event1.event_link}}">Know More<i class="fa fa-angle-right"></i></a>
+          </div>
+      </div>
+  </div>
+{% endfor %}
+
+</div>
+
+
+
+</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'assets_event/bootstrap/js/bootstrap.min.js' %}"></script>
+    <p></p>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+     <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>EGI StudentsPortal</h3>
+            <p>
+              28km mile stone, Agra-Delhi Highway, NH-2, Farah, Mathura -281122 <br><br>
+              <strong>Phone:</strong>+91 96392 34234<br>
+              <strong>Email:</strong> egistudentCore@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'main' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'team' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'sources' %}">Sources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+    
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>EGI StudentsPortal</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.instagram.com/codingnova/">Coding Novas</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://twitter.com/codingnova" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/codingnova" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/codingnova/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.github.com/codingnova/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+
+
+</html>

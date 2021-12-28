@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+{% csrf_token %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EGI Students Portal</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png" rel="icon"> 
+  <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png" rel="EGI">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  {% load static %}
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css" rel="stylesheet' %}">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  {% load static %}
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="" class="logo mr-auto"><img src="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" alt="" class="img-fluid"></a>
+      <h1 class="logo mr-auto"><a href=""><span>EGI Students</span> Portal</a></h1>
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class=""><a href="{% url 'main' %}">Home</a></li>
+
+          <li class="drop-down"><a href="">Download SyllabusS</a>
+            <ul>
+            <li class="drop-down"><a href="">B-Tech</a>
+            <ul>
+            
+              <li class="drop-down"><a href="">B-Tech 1st Year</a>
+                <ul>
+                  <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech.%20Ist%20Year%20Common%20AICTE%20Model%20Curriculum%202020-21%2025082021.pdf">Common For All</a></li>
+                
+                </ul>
+                <li class="drop-down"><a href="#">B-Tech 2nd Year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus1920/B.Tech%202nd%20Year%20CSE%20&%20CSIT%20AICTE%20Model%20Curriculum%202019-20.pdf">CS</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus1920/B.Tech.%202nd%20Year%20Electrical%20Engg%20AICTE%20Model%20Curriculum%202019-20.pdf">EE</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus1920/B.Tech.%202nd%20Year%20Mechanical%20Engg%20AICTE%20Model%20Curriculum%202019-20.pdf">ME</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus1920/B.Tech.%202nd%20Year%20Civil%20Engg%20AICTE%20Model%20Curriculum%202019-20.pdf">CE</a></li>
+                    
+                  </ul>
+                </li>
+                <li class="drop-down"><a href="#">B-Tech 3rd Year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech_CSE%20and%20CS%20Syllabus%20of%203rd%20Year%209%20March%202021.pdf">CS</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/25th%20August%20Revised%20Final%20B.Tech.%203rd%20Year%20Electrical%20Engineering%20AICTE%20Model%20Curriculum%202020-21.pdf">EE</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B%20Tech%20Mechanical%20Engineering%207%20Aug.pdf">ME</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech_CE%20Civil%20Syllabus%20of%203rd%20Year5%20April%202021.pdf">CE</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech%20EC%20Syllabus%204%20Aril%202021.pdf">EC</a></li>
+                  </ul>
+                </li>
+                <li class="drop-down"><a href="#">B-Tech 4th year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2122/BTech%20CS%204th%20Year%20Syllabus.pdf">CS</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2122/EE%204th%20Year%20Syllabus%20_2021-22.pdf">EE</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2122/Mechanical%20Engg%204th%20year.pdf">ME</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2122/B%20Tech%20Civil%20Engg,%20Final%20Year%202021-22.pdf">CE</a></li>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2122/B.Tech%20EC%20Final%20Year.pdf">EC</a></li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="drop-down"><a href="">BCA</a>
+            <ul>
+            
+              <li class="drop-down"><a href="">BCA 1st Year</a>
+                <ul>
+                  <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech.%20Ist%20Year%20Common%20AICTE%20Model%20Curriculum%202020-21%2025082021.pdf">Common For All</a></li>
+                
+                </ul>
+                <li class="drop-down"><a href="#">BCA 2nd Year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus1920/B.Tech%202nd%20Year%20CSE%20&%20CSIT%20AICTE%20Model%20Curriculum%202019-20.pdf">Common For All</a></li> 
+                  </ul>
+                </li>
+                <li class="drop-down"><a href="#">BCA 3rd Year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech_CSE%20and%20CS%20Syllabus%20of%203rd%20Year%209%20March%202021.pdf">Common For All</a></li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="drop-down"><a href="">BBA</a>
+            <ul>
+            
+              <li class="drop-down"><a href="">BBA 1st Year</a>
+                <ul>
+                  <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech.%20Ist%20Year%20Common%20AICTE%20Model%20Curriculum%202020-21%2025082021.pdf">Common For All</a></li>
+                
+                </ul>
+                <li class="drop-down"><a href="#">BBA 2nd Year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus1920/B.Tech%202nd%20Year%20CSE%20&%20CSIT%20AICTE%20Model%20Curriculum%202019-20.pdf">Common For All</a></li> 
+                  </ul>
+                </li>
+                <li class="drop-down"><a href="#">BBA 3rd Year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech_CSE%20and%20CS%20Syllabus%20of%203rd%20Year%209%20March%202021.pdf">Common For All</a></li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="drop-down"><a href="">MBA</a>
+            <ul>
+            
+              <li class="drop-down"><a href="">MBA 1st Year</a>
+                <ul>
+                  <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus2021/B.Tech.%20Ist%20Year%20Common%20AICTE%20Model%20Curriculum%202020-21%2025082021.pdf">Common For All</a></li>
+                
+                </ul>
+                <li class="drop-down"><a href="#">MBA 2nd Year</a>
+                  <ul>
+                    <li><a href="https://aktu.ac.in/pdf/syllabus/syllabus1920/B.Tech%202nd%20Year%20CSE%20&%20CSIT%20AICTE%20Model%20Curriculum%202019-20.pdf">Common for All</a></li> 
+                  </ul>
+                </li>
+
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+          <li><a href="{% url 'sources' %}"> Sources </a></li>
+
+          
+          
+          <li class="drop-down" ><a href="#">More</a>
+              <ul>
+                {% comment %} <li ><a href="whatsapp.html">WhatsApp Groups Of Your Batch</a> {% endcomment %}
+                 <li><a href="{% url 'frequently' %}"> Frequently asked Questions </a></li>
+                  <li ><a href="{% url 'HOD' %}">Contact Your H.O.D.</a></li>
+                  <li ><a href="https://docs.google.com/forms/d/e/1FAIpQLScAbHqVyjMI3R8f_nOkP1_fEOWH2OfecL5YCeGYvLcyucbEFA/viewform?usp=sf_link">Share Your Notes</a></li>
+                  <li ><a href="#">Give Your Feedback</a></li>
+                  <li ><a href="{% url 'signout' %}">LogOut</a></li>
+                  <li><a href="{% url 'team' %}">About Us</a></li>
+              </ul>
+            </li>
+            <li><a href="https://admission.eshancollege.com/">Official Website</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Projects</h2>
+          <ol>
+            <li><a href="{% url 'main' %}">Home</a></li>
+            <li>Projects</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Projects Section ======= -->
+   <section id="projects" class="Projects">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Project Gallary</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="Projects-flters">
+              <li data-filter="*" class="filter-active">All Projects</li>
+              <!-- <li data-filter=".filter-app">Computer Science Projects</li>
+              <li data-filter=".filter-card">Electronics & EE Projects</li>
+              <li data-filter=".filter-web">Mechanical Projects</li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="row Projects-container" data-aos="fade-up">
+          {% for project in Allprojects %}
+
+          <div class="col-lg-4 col-md-6 Projects-item filter-app">
+            <img src="{{project.Project_image.url}}" class="img-fluid" alt="">
+            <div class="Projects-info">
+              <h4>{{project.Project_name}}</h4>
+              <p>CS</p>
+              <a href="{{project.Project_image.url}}" data-gall="ProjectsGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="{{project.Github_link}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              
+
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+        <button type="button" class="btn btn-outline-success" style="margin-left: 1000px;"><a href="http://127.0.0.1:8000/admin/projects/project/add/" style="text-align: center;">Post Your Project</a></button>
+      </div>
+    </section>
+    </section><!-- End Projects Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+ <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>EGI Students Portal</h3>
+            <p>
+              28km mile stone, Agra-Delhi Highway, NH-2, Farah, Mathura -281122 <br><br>
+              <strong>Phone:</strong>+91 96392 34234<br>
+              <strong>Email:</strong> egistudentPortal@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+           <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'main' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'team' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'sources' %}">Sources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+    
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>EGI Students Portal</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.instagram.com/codingnova/">Coding Novas</a>
+        </div>
+      </div>
+         <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <a href="https://twitter.com/codingnova" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="https://www.facebook.com/codingnova" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="https://www.instagram.com/codingnova/" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="https://www.github.com/codingnova/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery-sticky/jquery.sticky.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script>
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets_quizes/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="{% static 'assets_quizes/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+</head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EGI Student Portal</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+ <!-- Favicons -->
+ {% load static %}
+    <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png'%}" rel="icon">
+    <link href="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png'%}" rel="EGI">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/aos/aos.css" rel="stylesheet' %}">
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    {% load static %}
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+  
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+  
+        <a href="{% url 'main' %}" class="logo mr-auto"><img src="{% static 'assets/img/ESHAN-LOGO-REDESIGN.png' %}" alt="" class="img-fluid"></a>
+        <h1 class="logo mr-auto"><a href="{% url 'main' %}"><span>EGI Students</span> Portal</a></h1>
+        
+  
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="{% url 'main' %}">Home</a></li>
+  
+  
+            <li><a href="{% url 'sources' %}"> Resources </a></li>
+
+            
+            
+            <li class="drop-down" ><a href="#">More</a>
+                <ul>
+                  
+                   <li><a href="{% url 'frequently' %}"> Frequently asked Questions </a></li>
+                    <li ><a href="{% url 'HOD' %}">Contact Your H.O.D.</a></li>
+                    <li ><a href="https://docs.google.com/forms/d/e/1FAIpQLScAbHqVyjMI3R8f_nOkP1_fEOWH2OfecL5YCeGYvLcyucbEFA/viewform?usp=sf_link">Share Your Notes</a></li>
+                    <li ><a href="#">Give Your Feedback</a></li>
+                    <li ><a href="{% url 'signout' %}">LogOut</a></li>
+                    <li><a href="{% url 'team' %}">About Us</a></li>
+                </ul>
+              </li>
+              <li><a href="https://admission.eshancollege.com/">Official Website</a></li>
+          </ul>
+        </nav><!-- .nav-menu -->
+  
+        
+  
+      </div>
+    </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Quizes </h2>
+          <ol>
+            <li><a href="/{% url 'main' %}">Home</a></li>
+            <li>Quizes</li>
+            <li></li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="{% static 'assets_quizes/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_quizes/fonts/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets_quizes/css/styles.css' %}">
+</head>
+
+<body>
+    <section class="mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 text-center mb-3">
+                    <h3><strong>Your Quizes</strong></h3>
+                </div>
+                <div class="col">
+                    <div class="table-responsive" id="myTable">
+                        <table class="table table-striped table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>S.No.</th>
+                                    <th>Quiz Name</th>
+                                    <th>last date to Attempt</th>
+                                    
+                                    <th class="text-center" style="width: 50px;">Attempt</th>
+                                </tr>
+                            </thead>
+                            {% for quiz in quizes %}
+                            <tbody>
+                            
+                                <tr>
+                                    <td>{{quiz.serial}}</td>
+                                    <td>{{quiz.quiz_name}}</td>
+                                    <td>{{quiz.last_date}}</td>
+                                    <td class="text-center" style="height: 57.8px;width: 111.4px;margin: 11px;padding: 17px;"><a class="del-row" href="{{quiz.quiz_link}}"><i class="fas fa-check" style="font-size: 20px;"></i></a></td>
+                                </tr>
+                            </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'assets_quizes/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets_quizes/js/Dynamically-Add-Remove-Table-Row.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+<footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>EGI Student Portal</h3>
+            <p>
+              28km mile stone, Agra-Delhi Highway, NH-2, Farah, Mathura -281122 <br><br>
+              <strong>Phone:</strong>+91 96392 34234<br>
+              <strong>Email:</strong> egistudentportal@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'main' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'team' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'sources' %}">Sources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+    
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>EGI student Portal</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.instagram.com/codingnova/">Coding Novas</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://twitter.com/eshancollege" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/eshancollege" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/eshaninstitute/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="linkedin.com/eshancollege" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="lol/vendor/jquery/jquery.min.js"></script>
+  <script src="lol/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lol/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="lol/vendor/php-email-form/validate.js"></script>
+  <script src="lol/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="lol/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="lol/vendor/venobox/venobox.min.js"></script>
+  <script src="lol/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="lol/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="lol/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="lol/js/main.js"></script>
+
+</body>
+
+</html>
+
+</html>
