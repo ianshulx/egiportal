@@ -52,7 +52,8 @@
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-100 text-white">
       {% csrf_token %}
-        <h1 class="display-4"> Hello! {% for fname in fname %} {{fname}}
+        <h1 class="display-4"> Hello! </h1> 
+        <h1 class="display-4"></h1>{% for fname in fname %} {{fname}}
                 {% endfor %}</h1>
         <p class="lead mb-0">Hope everything is going great</p>
         <p></p>
