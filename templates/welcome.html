@@ -55,14 +55,16 @@
         <h3 class="display-2"> Hello! </h3> 
         <h1 class="display-4">{% for fname in fname %} {{fname}}
                 {% endfor %}</h1>
+                <p></p>
+
         <p class="lead mb-0">Hope everything is going great</p>
         <p></p>
         
         
 
         
-        <div>       <label for="checkbox ">I've read <a href="https://www.w3schools.com/tags/att_input_placeholder.asp">privacy policy</a></label>
-          <input type="checkbox" id="privacy" name="privacy" value="privacy" style="top: 100px;"></div>
+        <div>       <label for="checkbox ">before enterimg please read our<a href="https://www.w3schools.com/tags/att_input_placeholder.asp"> privacy policy</a></label>
+          
         
           <button type="button" class="btn btn-outline-dark" style="margin-top: 240px;"><a  href="{% url 'main' %}"> click to Enter </a></button>
         </div>
