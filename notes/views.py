@@ -141,28 +141,28 @@ def btech_ee(request):
     return render (request, "notes/btech/ee/sem.html")
 
 def btech_ee_sem1(request):
-    btechmesem3=btech_ee_sem3_notes.objects.all()
-    return render (request, "notes/btech/me/sem1.html",{"btechmesem3":btechmesem3})
+    btecheesem3=btech_ee_sem3_notes.objects.all()
+    return render (request, "notes/btech/ee/sem1.html",{"btecheesem3":btecheesem3})
 
 def btech_ee_sem2(request):
-    btechmesem4=btech_ee_sem4_notes.objects.all()
-    return render (request, "notes/btech/me/sem2.html",{"btechmesem4":btechmesem4})
+    btecheesem4=btech_ee_sem4_notes.objects.all()
+    return render (request, "notes/btech/ee/sem2.html",{"btecheesem4":btecheesem4})
 
 def btech_ee_sem3(request):
-    btechmesem5=btech_ee_sem5_notes.objects.all()
-    return render (request, "notes/btech/me/sem3.html",{"btechmesem5":btechmesem5})
+    btecheesem5=btech_ee_sem5_notes.objects.all()
+    return render (request, "notes/btech/ee/sem3.html",{"btecheesem5":btecheesem5})
 
 def btech_ee_sem4(request):
-    btechmesem6=btech_ee_sem6_notes.objects.all()
-    return render (request, "notes/btech/me/sem4.html",{"btechmesem6":btechmesem6})
+    btecheesem6=btech_ee_sem6_notes.objects.all()
+    return render (request, "notes/btech/ee/sem4.html",{"btecheesem6":btecheesem6})
 
 def btech_ee_sem5(request):
-    btechmesem7=btech_ee_sem7_notes.objects.all()
-    return render (request, "notes/btech/me/sem5.html",{"btechmesem7":btechmesem7})
+    btecheesem7=btech_ee_sem7_notes.objects.all()
+    return render (request, "notes/btech/ee/sem5.html",{"btecheesem7":btecheesem7})
 
 def btech_ee_sem6(request):
-    btechmesem8=btech_ee_sem8_notes.objects.all()
-    return render (request, "notes/btech/me/sem6.html",{"btechmesem8":btechmesem8})
+    btecheesem8=btech_ee_sem8_notes.objects.all()
+    return render (request, "notes/btech/ee/sem6.html",{"btecheesem8":btecheesem8})
 
 
 # bca notesjects & notes
