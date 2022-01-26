@@ -203,8 +203,6 @@ def bca_sem6(request):
 
 
 def mba_sem(request):
-
-
     return render (request, "notes/mba/sem.html")
 
 def mba_sem1(request):
