@@ -39,7 +39,7 @@
   <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
 
-  
+
   <link rel="stylesheet" href="{% static 'assets_event/bootstrap/css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets_event/fonts/font-awesome.min.css' %}">
   <link rel="stylesheet" href="{% static 'assets_event/css/Bold-BS4-Cards-with-Hover-Effect-74-1.css' %}">
@@ -58,7 +58,7 @@
     <div class="container d-flex align-items-center">
 
       <a href="{% url 'main' %}" class="logo mr-auto"><img src="assets/img/ESHAN-LOGO-REDESIGN.png" alt="" class="img-fluid"></a>
-      <h1 class="logo mr-auto"><a href="/index.html"><span>EGI Learning</span> Core</a></h1>
+      <h1 class="logo mr-auto"><a href="/index.html"><span>EGI Students</span> Portal</a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="{% url 'main' %}">Home</a></li>
@@ -80,7 +80,7 @@
           <ol>
             <li><a href="main">Home</a></li>
             <li>Course</li>
-            <li>BCA</li>
+            <li>mba</li>
             
 
           </ol>
@@ -93,24 +93,24 @@
         <section class="portfolio-block projects-cards">
             <div class="container">
                 <div class="heading">
+    {% for mba_sem2_notes in mbasem2  %}
+                    <div class="col-sm-6 col-md-4">
+                      <div class="box"><img src="{% static 'assets_notes/img/course/sub.jpg' %}" alt="Desmond">
+                          <div class="box-heading">
+                              <h4 class="title" style="color:#333333;"> {{mba_sem2_notes.Subject}}</h4><span class="post" style="color:#333333;"><b class="date">UNIT {{mba_sem2_notes.UNIT}} </b></span>
+                              <span class="post" style="color:#333333;"><b class="date"> {{mba_sem2_notes.UNIT_name}}</b></span>
+                          </div>
+                          <div class="boxContent">
+                              <b class="date">{{mba_sem2_notes.Subject}}</b>
+                              <p class="description" style="color:#2f00ff;"><b>UNIT {{mba_sem2_notes.UNIT}} {{mba_sem2_notes.UNIT_name}}</b></p>
+                              <p></p>
+                              <a class="read" href="{{mba_sem2_notes.Drive_link}}">Download Notes<i class="fa fa-angle-right"></i></a>
+                          </div>
+                      </div>
+                      {% endfor %}    
+                  </div>
                   
-                </div>
-                <div class="row">
-                  {% for bca_sem2_notes in bcasem2  %}
-                  <div class="col-sm-6 col-md-4">
-                    <div class="box"><img src="{% static 'assets_notes/img/course/sub.jpg' %}" alt="Desmond">
-                        <div class="box-heading">
-                            <h4 class="title" style="color:#333333;"> {{bca_sem2_notes.Subject}}</h4><span class="post" style="color:#333333;"><b class="date">UNIT {{bca_sem2_notes.UNIT}} </b></span>
-                            <span class="post" style="color:#333333;"><b class="date"> {{bca_sem2_notes.UNIT_name}}</b></span>
-                        </div>
-                        <div class="boxContent">
-                            <b class="date">{{bca_sem2_notes.Subject}}</b>
-                            <p class="description" style="color:#2f00ff;"><b>UNIT {{bca_sem2_notes.UNIT}} {{bca_sem2_notes.UNIT_name}}</b></p>
-                            <p></p>
-                            <a class="read" href="{{bca_sem2_notes.Drive_link}}">Download Notes<i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    {% endfor %} 
+
         </section>
     </main>
  </main>
