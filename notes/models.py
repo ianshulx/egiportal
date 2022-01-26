@@ -162,7 +162,7 @@ class btech_cs_sem8_notes(models.Model):
     def __str__(self):
         return self.UNIT_name
 
-        #CE
+        #Civil
 
 class btech_ce_sem3_notes(models.Model):
         Subject=models.CharField(max_length=50)
@@ -212,6 +212,124 @@ class btech_ce_sem7_notes(models.Model):
         return self.UNIT_name
 
 class btech_ce_sem8_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+
+# electrical
+
+class btech_ee_sem3_notes(models.Model):
+        Subject=models.CharField(max_length=50)
+        UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+        UNIT_name=models.CharField(max_length=150)
+        Drive_link=models.URLField(max_length=2000)
+    
+        def __str__(self):
+            return self.UNIT_name
+
+
+class btech_ee_sem4_notes(models.Model):
+        Subject=models.CharField(max_length=50)
+        UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+        UNIT_name=models.CharField(max_length=150)
+        Drive_link=models.URLField(max_length=2000)
+    
+        def __str__(self):
+            return self.UNIT_name
+
+class btech_ee_sem5_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+class btech_ee_sem6_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+
+class btech_ee_sem7_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+class btech_ee_sem8_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+# mechanical
+
+
+class btech_me_sem3_notes(models.Model):
+        Subject=models.CharField(max_length=50)
+        UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+        UNIT_name=models.CharField(max_length=150)
+        Drive_link=models.URLField(max_length=2000)
+    
+        def __str__(self):
+            return self.UNIT_name
+
+
+class btech_me_sem4_notes(models.Model):
+        Subject=models.CharField(max_length=50)
+        UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+        UNIT_name=models.CharField(max_length=150)
+        Drive_link=models.URLField(max_length=2000)
+    
+        def __str__(self):
+            return self.UNIT_name
+
+class btech_me_sem5_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+class btech_me_sem6_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+
+class btech_me_sem7_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+
+    def __str__(self):
+        return self.UNIT_name
+
+class btech_me_sem8_notes(models.Model):
     Subject=models.CharField(max_length=50)
     UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
     UNIT_name=models.CharField(max_length=150)

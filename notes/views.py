@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.http import request
 from .models import bca_sem1_notes ,bca_sem6_notes ,bca_sem5_notes,bca_sem4_notes ,bca_sem3_notes ,bca_sem2_notes, btech_cs_sem3_notes, btech_sem1_notes,btech_sem2_notes
-from .models import btech_cs_sem3_notes,btech_cs_sem4_notes,btech_ce_sem8_notes,btech_ce_sem7_notes,btech_ce_sem6_notes,bca_sem1_notes,btech_ce_sem5_notes,btech_ce_sem4_notes,btech_ce_sem3_notes,btech_cs_sem8_notes,btech_cs_sem7_notes,btech_cs_sem6_notes,btech_cs_sem5_notes
+from .models import btech_cs_sem3_notes,btech_cs_sem4_notes,btech_ce_sem8_notes,btech_ce_sem7_notes,btech_ce_sem6_notes,bca_sem1_notes,btech_ce_sem5_notes,btech_ce_sem4_notes,btech_ce_sem3_notes,btech_cs_sem8_notes,btech_cs_sem7_notes,btech_cs_sem6_notes,btech_cs_sem5_notes,btech_me_sem3_notes,btech_me_sem4_notes,btech_me_sem5_notes,btech_me_sem6_notes,btech_me_sem7_notes,btech_me_sem8_notes,btech_ee_sem3_notes,btech_ee_sem4_notes,btech_ee_sem5_notes,btech_ee_sem6_notes,btech_ee_sem7_notes,btech_ee_sem8_notes
 
 
 # Create your views here.
@@ -93,22 +93,28 @@ def btech_me(request):
     return render (request, "notes/btech/me/sem.html")
 
 def btech_me_sem1(request):
-    return render (request, "notes/btech/me/sem1.html")
+    btechmesem3=btech_me_sem3_notes.objects.all()
+    return render (request, "notes/btech/me/sem1.html",{"btechmesem3":btechmesem3})
 
 def btech_me_sem2(request):
-    return render (request, "notes/btech/me/sem2.html")
+    btechmesem4=btech_me_sem4_notes.objects.all()
+    return render (request, "notes/btech/me/sem2.html",{"btechmesem4":btechmesem4})
 
 def btech_me_sem3(request):
-    return render (request, "notes/btech/me/sem3.html")
+    btechmesem5=btech_me_sem5_notes.objects.all()
+    return render (request, "notes/btech/me/sem3.html",{"btechmesem5":btechmesem5})
 
 def btech_me_sem4(request):
-    return render (request, "notes/btech/me/sem4.html")
+    btechmesem6=btech_me_sem6_notes.objects.all()
+    return render (request, "notes/btech/me/sem4.html",{"btechmesem6":btechmesem6})
 
 def btech_me_sem5(request):
-    return render (request, "notes/btech/me/sem5.html")
+    btechmesem7=btech_me_sem7_notes.objects.all()
+    return render (request, "notes/btech/me/sem5.html",{"btechmesem7":btechmesem7})
 
 def btech_me_sem6(request):
-    return render (request, "notes/btech/me/sem6.html")
+    btechmesem8=btech_me_sem8_notes.objects.all()
+    return render (request, "notes/btech/me/sem6.html",{"btechmesem8":btechmesem8})
 
 def btech_ec(request):
     return render (request, "notes/btech/ec/sem.html")
@@ -135,23 +141,28 @@ def btech_ee(request):
     return render (request, "notes/btech/ee/sem.html")
 
 def btech_ee_sem1(request):
-    return render (request, "notes/btech/ee/sem1.html")
+    btechmesem3=btech_ee_sem3_notes.objects.all()
+    return render (request, "notes/btech/me/sem1.html",{"btechmesem3":btechmesem3})
 
 def btech_ee_sem2(request):
-    return render (request, "notes/btech/ee/sem2.html")
+    btechmesem4=btech_ee_sem4_notes.objects.all()
+    return render (request, "notes/btech/me/sem2.html",{"btechmesem4":btechmesem4})
 
 def btech_ee_sem3(request):
-    return render (request, "notes/btech/ee/sem3.html")
+    btechmesem5=btech_ee_sem5_notes.objects.all()
+    return render (request, "notes/btech/me/sem3.html",{"btechmesem5":btechmesem5})
 
 def btech_ee_sem4(request):
-    return render (request, "notes/btech/ee/sem4.html")
+    btechmesem6=btech_ee_sem6_notes.objects.all()
+    return render (request, "notes/btech/me/sem4.html",{"btechmesem6":btechmesem6})
 
 def btech_ee_sem5(request):
-    return render (request, "notes/btech/ee/sem5.html")
+    btechmesem7=btech_ee_sem7_notes.objects.all()
+    return render (request, "notes/btech/me/sem5.html",{"btechmesem7":btechmesem7})
 
 def btech_ee_sem6(request):
-    
-    return render (request, "notes/btech/ee/sem6.html")
+    btechmesem8=btech_ee_sem8_notes.objects.all()
+    return render (request, "notes/btech/me/sem6.html",{"btechmesem8":btechmesem8})
 
 
 # bca notesjects & notes
