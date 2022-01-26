@@ -340,3 +340,43 @@ class btech_me_sem8_notes(models.Model):
 
 
 
+class mba_sem1_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+    
+    def __str__(self):
+        return self.UNIT_name
+
+
+class mba_sem2_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+    
+    def __str__(self):
+        return self.UNIT_name
+
+
+class mba_sem3_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+    
+    def __str__(self):
+        return self.UNIT_name
+
+
+
+class mba_sem4_notes(models.Model):
+    Subject=models.CharField(max_length=50)
+    UNIT=models.CharField(max_length=50, choices=UNIT_CHOICE)
+    UNIT_name=models.CharField(max_length=150)
+    Drive_link=models.URLField(max_length=2000)
+    
+    def __str__(self):
+        return self.UNIT_name
+

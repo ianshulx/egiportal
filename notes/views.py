@@ -3,6 +3,7 @@ from django.http import HttpRequest
 from django.http import request
 from .models import bca_sem1_notes ,bca_sem6_notes ,bca_sem5_notes,bca_sem4_notes ,bca_sem3_notes ,bca_sem2_notes, btech_cs_sem3_notes, btech_sem1_notes,btech_sem2_notes
 from .models import btech_cs_sem3_notes,btech_cs_sem4_notes,btech_ce_sem8_notes,btech_ce_sem7_notes,btech_ce_sem6_notes,bca_sem1_notes,btech_ce_sem5_notes,btech_ce_sem4_notes,btech_ce_sem3_notes,btech_cs_sem8_notes,btech_cs_sem7_notes,btech_cs_sem6_notes,btech_cs_sem5_notes,btech_me_sem3_notes,btech_me_sem4_notes,btech_me_sem5_notes,btech_me_sem6_notes,btech_me_sem7_notes,btech_me_sem8_notes,btech_ee_sem3_notes,btech_ee_sem4_notes,btech_ee_sem5_notes,btech_ee_sem6_notes,btech_ee_sem7_notes,btech_ee_sem8_notes
+from .models import mba_sem1_notes, mba_sem2_notes, mba_sem3_notes, mba_sem4_notes
 
 
 # Create your views here.
@@ -197,6 +198,32 @@ def bca_sem5(request):
 def bca_sem6(request):
     bcasem6=bca_sem6_notes.objects.all()
     return render (request, "notes/bca/sem6.html", {'bcasem6' : bcasem6})
+
+
+
+
+def mba_sem(request):
+
+
+    return render (request, "notes/mba/sem.html")
+
+def mba_sem1(request):
+
+    mbasem1=mba_sem1_notes.objects.all()
+
+    return render (request, "notes/mba/sem1.html", {'mbasem1' : mbasem1})
+
+def mba_sem2(request):
+    mbasem2=mba_sem2_notes.objects.all()
+    return render (request, "notes/mba/sem2.html", {'mbasem2' : mbasem2})
+
+def mba_sem3(request):
+    mbasem3=mba_sem3_notes.objects.all()
+    return render (request, "notes/mba/sem3.html", {'mbasem3' : mbasem3})
+
+def mba_sem4(request):
+    mbasem4=mba_sem4_notes.objects.all()
+    return render (request, "notes/mba/sem4.html", {'mbasem4' : mbasem4})
 
 
 

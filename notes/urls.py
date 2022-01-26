@@ -85,6 +85,12 @@ urlpatterns = [
     path('bca_sem5', views.bca_sem5, name='bca_sem5'),
     path('bca_sem6', views.bca_sem6, name='bca_sem6'),
 
+    path('mba_sem', views.mba_sem, name='mba_sem'),
+    path('mba_sem1', views.mba_sem1, name='mba_sem1'),
+    path('mba_sem2', views.mba_sem2, name='mba_sem2'),
+    path('mba_sem3', views.mba_sem3, name='mba_sem3'),
+    path('mba_sem4', views.mba_sem4, name='mba_sem4'),
+
 
 
 
