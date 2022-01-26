@@ -10,6 +10,8 @@ urlpatterns = [
     path('notes/', views.notes, name='notes'),
     path('bca/', views.bca, name='bca'),
     path('btech/', views.btech, name='btech'),
+    path('mba/', views.mba, name='mba'),
+
 
 
     path('bca_sem1/', views.bca_sem1, name='bca_sem1'),

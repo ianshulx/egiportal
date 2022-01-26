@@ -18,7 +18,7 @@ def btech(request):
     return render (request, "notes/btech.html")
 
 def mba(request):
-    return render (request, "notes/mba/btech.html")
+    return render (request, "notes/mba/sem.html")
 
 
 def btech_first(request):

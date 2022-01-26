@@ -51,7 +51,7 @@
     <div class="container d-flex align-items-center">
 
       <a href="{% url 'main' %}" class="logo mr-auto"><img src="assets/img/ESHAN-LOGO-REDESIGN.png" alt="" class="img-fluid"></a>
-      <h1 class="logo mr-auto"><a href="/index.html"><span>EGI Learning</span> Core</a></h1>
+      <h1 class="logo mr-auto"><a href="/index.html"><span>EGI Students</span> Portal</a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li><a href="{% url 'main' %}">Home</a></li>
@@ -114,9 +114,9 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{% static 'assets_notes/img/course/mba.jpg' %}" alt="Card Image"></a>
+                        <div class="card border-0"><a href="{% url 'mba' %}"><img class="card-img-top scale-on-hover" src="{% static 'assets_notes/img/course/mba.jpg' %}" alt="Card Image"></a>
                             <div class="card-body">
-                                <h6><a href="#">MBA</a></h6>
+                                <h6><a href="{% url 'mba' %}">MBA</a></h6>
                                 <p class="text-muted card-text">Click To download MBA notes </p>
                             </div>
                         </div>
