@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['127.0.0.1','egiportal.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
     'home.apps.HomeConfig',
     'notes.apps.NotesConfig',
     'projects.apps.ProjectsConfig',

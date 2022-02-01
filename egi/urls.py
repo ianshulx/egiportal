@@ -18,8 +18,11 @@ from django.urls import path, include
 from . import views
 
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('jet/', include('jet.urls', 'jet')),
     path('', include('authentication.urls')),
     path('', include('home.urls')),
     path('', include('notes.urls')),
